@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Brand palette from official identity sheet */
+:root {
+  --primitive-navy-950: #020617;
+  --primitive-navy-900: #0f172a;
+  --primitive-navy-800: #1e293b;
+  --primitive-navy-700: #334155;
+  --primitive-navy-600: #475569;
+  --primitive-navy-400: #94a3b8;
+  --primitive-navy-300: #cbd5e1;
+  --primitive-navy-200: #e2e8f0;
+  --primitive-navy-100: #f1f5f9;
+  --primitive-navy-50: #f8fafc;
+
+  --primitive-blue-600: #2563eb;
+  --primitive-blue-500: #3b82f6;
+  --primitive-blue-400: #60a5fa;
+
+  --primitive-teal-500: #10b981;
+  --primitive-teal-400: #34d399;
+
+  --primitive-success: #10b981;
+  --primitive-warning: #f59e0b;
+  --primitive-error: #ef4444;
+  --primitive-info: #3b82f6;
+
+  --font-family-display: var(--font-syne), "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-family-body:
+    var(--font-source), "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-family-mono: var(--font-plex), "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Light theme */
+  --color-background-primary: var(--primitive-navy-50);
+  --color-background-secondary-raw: var(--primitive-navy-100);
+  --color-background-surface: #ffffff;
+  --color-background-overlay: rgb(15 23 42 / 0.55);
+  --color-background-hero-from: #0f172a;
+  --color-background-hero-via: #1e293b;
+  --color-background-hero-to: #0f766e;
+
+  --color-text-primary: var(--primitive-navy-900);
+  --color-text-secondary: var(--primitive-navy-600);
+  --color-text-muted: var(--primitive-navy-400);
+  --color-text-inverse: var(--primitive-navy-200);
+  --color-text-brand: var(--primitive-blue-600);
+
+  --color-border-default: var(--primitive-navy-300);
+  --color-border-subtle-raw: var(--primitive-navy-200);
+  --color-border-strong-raw: var(--primitive-navy-400);
+
+  --color-action-primary: var(--primitive-blue-500);
+  --color-action-primary-hover: var(--primitive-blue-600);
+  --color-action-primary-foreground: #ffffff;
+  --color-action-secondary: transparent;
+  --color-action-secondary-foreground: var(--primitive-navy-900);
+  --color-action-accent: var(--primitive-teal-500);
+
+  --color-feedback-success: var(--primitive-success);
+  --color-feedback-warning: var(--primitive-warning);
+  --color-feedback-error: var(--primitive-error);
+  --color-feedback-info: var(--primitive-info);
+
+  --color-ring-raw: var(--primitive-blue-500);
+
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+
+  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.06);
+  --shadow-md: 0 8px 24px rgb(15 23 42 / 0.08);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 150ms;
+  --duration-base: 280ms;
+  --duration-slow: 480ms;
+}
+
+/* Dark theme — brand default look */
+.dark {
+  --color-background-primary: var(--primitive-navy-900);
+  --color-background-secondary-raw: var(--primitive-navy-800);
+  --color-background-surface: #1e293b;
+  --color-background-overlay: rgb(2 6 23 / 0.72);
+  --color-background-hero-from: #020617;
+  --color-background-hero-via: #0f172a;
+  --color-background-hero-to: #064e3b;
+
+  --color-text-primary: var(--primitive-navy-200);
+  --color-text-secondary: var(--primitive-navy-300);
+  --color-text-muted: var(--primitive-navy-400);
+  --color-text-inverse: var(--primitive-navy-900);
+  --color-text-brand: var(--primitive-blue-400);
+
+  --color-border-default: var(--primitive-navy-700);
+  --color-border-subtle-raw: #1e293b;
+  --color-border-strong-raw: var(--primitive-navy-600);
+
+  --color-action-primary: var(--primitive-blue-500);
+  --color-action-primary-hover: var(--primitive-blue-400);
+  --color-action-primary-foreground: #ffffff;
+  --color-action-secondary-foreground: var(--primitive-navy-200);
+  --color-action-accent: var(--primitive-teal-400);
+
+  --color-ring-raw: var(--primitive-blue-400);
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35);
+  --shadow-md: 0 12px 32px rgb(0 0 0 / 0.45);
+}
+
+@theme inline {
+  --color-background: var(--color-background-primary);
+  --color-background-secondary: var(--color-background-secondary-raw);
+  --color-surface: var(--color-background-surface);
+  --color-foreground: var(--color-text-primary);
+  --color-muted: var(--color-text-secondary);
+  --color-muted-foreground: var(--color-text-muted);
+  --color-brand: var(--color-text-brand);
+  --color-border: var(--color-border-default);
+  --color-border-subtle: var(--color-border-subtle-raw);
+  --color-border-strong: var(--color-border-strong-raw);
+  --color-primary: var(--color-action-primary);
+  --color-primary-hover: var(--color-action-primary-hover);
+  --color-primary-foreground: var(--color-action-primary-foreground);
+  --color-accent: var(--color-action-accent);
+  --color-ring: var(--color-ring-raw);
+  --color-destructive: var(--color-feedback-error);
+  --color-hero-from: var(--color-background-hero-from);
+  --color-hero-via: var(--color-background-hero-via);
+  --color-hero-to: var(--color-background-hero-to);
+
+  --font-display: var(--font-family-display);
+  --font-sans: var(--font-family-body);
+  --font-mono: var(--font-family-mono);
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: radial-gradient(
+      ellipse 80% 50% at 50% -20%,
+      rgb(59 130 246 / 0.12),
+      transparent
+    );
+    min-height: 100dvh;
+  }
+
+  .dark body {
+    background-image: radial-gradient(
+      ellipse 70% 45% at 50% -15%,
+      rgb(16 185 129 / 0.1),
+      transparent
+    );
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-action-primary) 35%, transparent);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+  }
+}

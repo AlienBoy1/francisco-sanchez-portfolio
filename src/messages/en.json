@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "titleDefault": "Francisco Sánchez · Software Engineer",
+    "titleTemplate": "%s · Francisco Sánchez",
+    "description": "Engineering portfolio showcasing software architecture, production projects, and professional craftsmanship."
+  },
+  "nav": {
+    "about": "About",
+    "work": "Work",
+    "projects": "Work",
+    "experience": "Experience",
+    "skills": "Skills",
+    "caseStudies": "Case Studies",
+    "technologies": "Technologies",
+    "docs": "Docs",
+    "github": "GitHub",
+    "lab": "Lab",
+    "platform": "Lab",
+    "search": "Search",
+    "architecture": "Architecture",
+    "features": "Features",
+    "traceability": "Traceability",
+    "analytics": "Analytics",
+    "resume": "Resume",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "primary": "Primary",
+    "mobile": "Mobile"
+  },
+  "theme": {
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode",
+    "toggle": "Toggle theme"
+  },
+  "locale": {
+    "label": "Language",
+    "en": "EN",
+    "es": "ES"
+  },
+  "home": {
+    "headline": "Software engineered with evidence—architecture, craft, and production discipline.",
+    "subhead": "Lead Software Engineer in Guadalajara. Live products: HTL Operations, Qyntra Gym, and Capital Gang.",
+    "ctaProjects": "View work",
+    "ctaResume": "Resume",
+    "ctaContact": "Contact",
+    "positioningEyebrow": "Positioning",
+    "positioningTitle": "Lead engineering with clarity, evidence, and long-term systems thinking.",
+    "positioningBody": "Work centered on production PWAs and platforms—operations systems, gym products, and brand commerce—with architecture, accessible UI, and case-study documentation that survives the handoff.",
+    "workEyebrow": "Selected work",
+    "workTitle": "Live products. Documented cases.",
+    "workIntro": "Three production surfaces with real visuals and public demos. Open each case for context, stack, outcomes, and documentation.",
+    "workAll": "All work",
+    "workOutcome": "Outcome:",
+    "workView": "View case",
+    "processEyebrow": "How I work",
+    "processTitle": "A repeatable delivery arc.",
+    "processIntro": "The same discipline applied from discovery through documentation—so quality compounds instead of resetting each release.",
+    "process": {
+      "discover": {
+        "title": "Discover",
+        "body": "Clarify problem, constraints, and success criteria before writing code."
+      },
+      "architect": {
+        "title": "Architect",
+        "body": "Define boundaries, interfaces, and trade-offs that keep systems evolvable."
+      },
+      "deliver": {
+        "title": "Deliver",
+        "body": "Ship usable increments with accessibility, performance, and review discipline."
+      },
+      "document": {
+        "title": "Document",
+        "body": "Capture decisions so the next engineer inherits context, not archaeology."
+      }
+    },
+    "proofEyebrow": "Credibility",
+    "proofTitle": "Recent ownership and core stack.",
+    "proofAbout": "Full experience timeline",
+    "proofStack": "Core stack",
+    "proofSkills": "Skills breakdown",
+    "ctaEyebrow": "Next step",
+    "ctaTitle": "Let's talk about engineering work.",
+    "ctaBody": "Open to roles, collaborations, and product conversations where architecture and delivery quality matter.",
+    "ctaLab": "Engineering Lab"
+  },
+  "about": {
+    "eyebrow": "About",
+    "metaDescription": "Background, engineering philosophy, experience, and skills.",
+    "philosophy": "Engineering philosophy",
+    "expertise": "Areas of expertise",
+    "values": "Professional values",
+    "ctaContact": "Get in touch",
+    "ctaProjects": "View work",
+    "ctaResume": "Resume"
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Career timeline",
+    "intro": "Roles and initiatives that demonstrate engineering ownership, product delivery, and long-term platform thinking."
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Technical capabilities",
+    "intro": "Competencies organized for clarity—languages, frontend systems, engineering practice, and delivery tooling."
+  },
+  "projects": {
+    "eyebrow": "Work",
+    "title": "Selected engineering work",
+    "intro": "Live product case studies with photography and brand visuals, architecture notes, outcomes, and public demos.",
+    "view": "View case",
+    "outcomeLabel": "Outcome:",
+    "featured": "Featured",
+    "back": "← All work",
+    "role": "Role:",
+    "client": "Client:",
+    "gallery": "Product visuals",
+    "caseNav": "Case sections",
+    "context": "Context",
+    "problem": "Problem",
+    "solution": "Solution",
+    "objectives": "Objectives",
+    "approach": "Approach",
+    "architecture": "Architecture notes",
+    "documentation": "Documentation",
+    "documentationIntro": "Product notes covering scope, users, architecture, and delivery decisions.",
+    "technologies": "Technologies",
+    "features": "Features",
+    "challenges": "Challenges",
+    "outcomes": "Outcomes",
+    "results": "Results",
+    "lessons": "Lessons learned",
+    "liveDemo": "Live demo",
+    "repository": "Repository",
+    "relatedLab": "Engineering docs",
+    "caseStudy": "Case study:"
+  },
+  "caseStudies": {
+    "eyebrow": "Case Studies",
+    "title": "Engineering case studies",
+    "intro": "Deep dives into problem framing, architecture, challenges, and lessons learned.",
+    "read": "Read case study",
+    "back": "← All case studies",
+    "overview": "Overview",
+    "problem": "Problem",
+    "objectives": "Objectives",
+    "approach": "Approach",
+    "lessons": "Lessons learned",
+    "relatedProject": "Related project"
+  },
+  "technologies": {
+    "eyebrow": "Technologies",
+    "title": "Technology catalog",
+    "intro": "The stack and practices used across portfolio work, organized by capability domain."
+  },
+  "docs": {
+    "eyebrow": "Engineering Docs",
+    "title": "Documentation browser",
+    "intro": "Curated navigation across governance, product, design, architecture, and development domains.",
+    "open": "Open domain"
+  },
+  "github": {
+    "eyebrow": "GitHub",
+    "title": "Public engineering presence",
+    "intro": "Repositories and activity that demonstrate how this portfolio and related work are built in the open.",
+    "viewRepo": "View repository",
+    "profile": "GitHub profile"
+  },
+  "search": {
+    "eyebrow": "Search",
+    "title": "Search the portfolio",
+    "intro": "Find projects, technologies, features, and documentation entries.",
+    "placeholder": "Search by keyword…",
+    "empty": "No results for that query.",
+    "hint": "Try project names, stacks, or domains like architecture."
+  },
+  "architecture": {
+    "eyebrow": "Architecture",
+    "title": "Architecture explorer",
+    "intro": "A navigable map of system layers, frontend modules, and routing responsibilities.",
+    "layers": "System layers",
+    "frontend": "Frontend modules",
+    "routing": "Route map"
+  },
+  "features": {
+    "eyebrow": "Features",
+    "title": "Feature registry",
+    "intro": "Product capabilities from the Feature Catalog (PRD-2007), with priority and status.",
+    "priority": "Priority",
+    "status": "Status",
+    "category": "Category"
+  },
+  "traceability": {
+    "eyebrow": "Traceability",
+    "title": "Requirements traceability",
+    "intro": "Links between product features, content sources, routes, and engineering docs.",
+    "feature": "Feature",
+    "route": "Route",
+    "content": "Content",
+    "docs": "Docs"
+  },
+  "analytics": {
+    "eyebrow": "Analytics",
+    "title": "Observability & analytics",
+    "intro": "Privacy-respecting analytics via Vercel Analytics, plus quality targets that govern this platform.",
+    "targets": "Quality targets",
+    "privacy": "No invasive tracking scripts. Analytics focus on aggregate performance and usage signals."
+  },
+  "resume": {
+    "eyebrow": "Resume",
+    "download": "Download PDF",
+    "summary": "Summary",
+    "experience": "Experience",
+    "skills": "Skills",
+    "selected": "Selected projects",
+    "contact": "Contact"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk about engineering work.",
+    "intro": "Open to roles, collaborations, and product conversations. Prefer email or a professional network—use the form to draft a message in your mail client.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "opening": "Opening your email client…",
+    "errorName": "Name is required.",
+    "errorEmail": "A valid email is required.",
+    "errorMessage": "Message must be at least 10 characters."
+  },
+  "footer": {
+    "contact": "Contact",
+    "work": "Work",
+    "lab": "Lab"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "body": "The page you requested does not exist or has moved.",
+    "home": "Home",
+    "projects": "Work"
+  },
+  "lab": {
+    "eyebrow": "Engineering Lab",
+    "title": "Technical depth for peer engineers",
+    "intro": "Secondary surfaces for documentation, architecture, registry, search, and observability—grouped so the public portfolio stays focused.",
+    "blurb": {
+      "technologies": "Stack and practices by capability domain.",
+      "docs": "Curated navigation across engineering documentation.",
+      "github": "Public repositories and engineering presence.",
+      "architecture": "System layers, modules, and route map.",
+      "features": "Product capability registry with status.",
+      "traceability": "Feature ↔ route ↔ docs matrix.",
+      "search": "Cross-portfolio keyword search.",
+      "analytics": "Quality targets and privacy-respecting analytics."
+    }
+  },
+  "platform": {
+    "eyebrow": "Engineering Lab",
+    "title": "Technical depth for peer engineers",
+    "intro": "Secondary surfaces for documentation, architecture, registry, search, and observability."
+  }
+}

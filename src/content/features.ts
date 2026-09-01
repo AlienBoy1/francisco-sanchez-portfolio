@@ -1,0 +1,255 @@
+import type { Locale } from "@/i18n/routing";
+
+export type FeatureRecord = {
+  id: string;
+  name: string;
+  category: string;
+  priority: "Critical" | "High" | "Medium" | "Low";
+  status: "Shipped" | "In Progress" | "Planned";
+  route?: string;
+};
+
+const en: FeatureRecord[] = [
+  {
+    id: "FEAT-0001",
+    name: "Professional Landing Page",
+    category: "Core",
+    priority: "Critical",
+    status: "Shipped",
+    route: "/",
+  },
+  {
+    id: "FEAT-0002",
+    name: "Global Navigation",
+    category: "Core",
+    priority: "Critical",
+    status: "Shipped",
+    route: "/",
+  },
+  {
+    id: "FEAT-0003",
+    name: "About Section",
+    category: "Core",
+    priority: "High",
+    status: "Shipped",
+    route: "/about",
+  },
+  {
+    id: "FEAT-0004",
+    name: "Skills Showcase",
+    category: "Core",
+    priority: "High",
+    status: "Shipped",
+    route: "/about#skills",
+  },
+  {
+    id: "FEAT-0005",
+    name: "Experience Timeline",
+    category: "Core",
+    priority: "High",
+    status: "Shipped",
+    route: "/about#experience",
+  },
+  {
+    id: "FEAT-0100",
+    name: "Project Portfolio",
+    category: "Professional",
+    priority: "Critical",
+    status: "Shipped",
+    route: "/projects",
+  },
+  {
+    id: "FEAT-0101",
+    name: "Resume Viewer",
+    category: "Professional",
+    priority: "Critical",
+    status: "Shipped",
+    route: "/resume",
+  },
+  {
+    id: "FEAT-0102",
+    name: "Resume Download",
+    category: "Professional",
+    priority: "High",
+    status: "Shipped",
+    route: "/resume",
+  },
+  {
+    id: "FEAT-0103",
+    name: "Contact Section",
+    category: "Professional",
+    priority: "Critical",
+    status: "Shipped",
+    route: "/contact",
+  },
+  {
+    id: "FEAT-0104",
+    name: "Professional Profile Links",
+    category: "Professional",
+    priority: "High",
+    status: "Shipped",
+    route: "/contact",
+  },
+  {
+    id: "FEAT-0200",
+    name: "Engineering Documentation",
+    category: "Technical",
+    priority: "Critical",
+    status: "Shipped",
+    route: "/lab/docs",
+  },
+  {
+    id: "FEAT-0201",
+    name: "Architecture Explorer",
+    category: "Technical",
+    priority: "High",
+    status: "Shipped",
+    route: "/lab/architecture",
+  },
+  {
+    id: "FEAT-0202",
+    name: "Case Studies",
+    category: "Technical",
+    priority: "Critical",
+    status: "Shipped",
+    route: "/projects",
+  },
+  {
+    id: "FEAT-0203",
+    name: "Technology Catalog",
+    category: "Technical",
+    priority: "High",
+    status: "Shipped",
+    route: "/lab/technologies",
+  },
+  {
+    id: "FEAT-0204",
+    name: "Qyntra Gym case",
+    category: "Professional",
+    priority: "Critical",
+    status: "Shipped",
+    route: "/projects/qyntra-gym",
+  },
+  {
+    id: "FEAT-0205",
+    name: "HTL Operations case",
+    category: "Professional",
+    priority: "Critical",
+    status: "Shipped",
+    route: "/projects/htl-operations",
+  },
+  {
+    id: "FEAT-0206",
+    name: "Capital Gang case",
+    category: "Professional",
+    priority: "Critical",
+    status: "Shipped",
+    route: "/projects/capital-gang",
+  },
+  {
+    id: "FEAT-0300",
+    name: "Advanced Search",
+    category: "Platform",
+    priority: "High",
+    status: "Shipped",
+    route: "/lab/search",
+  },
+  {
+    id: "FEAT-0301",
+    name: "Feature Registry",
+    category: "Platform",
+    priority: "High",
+    status: "Shipped",
+    route: "/lab/features",
+  },
+  {
+    id: "FEAT-0302",
+    name: "Requirements Traceability",
+    category: "Platform",
+    priority: "Medium",
+    status: "Shipped",
+    route: "/lab/traceability",
+  },
+  {
+    id: "FEAT-0501",
+    name: "Responsive Design",
+    category: "Platform",
+    priority: "Critical",
+    status: "Shipped",
+  },
+  {
+    id: "FEAT-0502",
+    name: "Accessibility Support",
+    category: "Platform",
+    priority: "Critical",
+    status: "Shipped",
+  },
+  {
+    id: "FEAT-0503",
+    name: "SEO Optimization",
+    category: "Platform",
+    priority: "Critical",
+    status: "In Progress",
+  },
+  {
+    id: "FEAT-0504",
+    name: "Performance Optimization",
+    category: "Platform",
+    priority: "Critical",
+    status: "In Progress",
+  },
+  {
+    id: "FEAT-0505",
+    name: "Analytics",
+    category: "Platform",
+    priority: "Medium",
+    status: "Shipped",
+    route: "/lab/analytics",
+  },
+  {
+    id: "FEAT-0600",
+    name: "i18n EN/ES",
+    category: "Platform",
+    priority: "Critical",
+    status: "Shipped",
+  },
+];
+
+const esNames: Record<string, string> = {
+  "FEAT-0001": "Landing profesional",
+  "FEAT-0002": "Navegación global",
+  "FEAT-0003": "Sección About",
+  "FEAT-0004": "Showcase de skills",
+  "FEAT-0005": "Timeline de experiencia",
+  "FEAT-0100": "Portafolio de proyectos",
+  "FEAT-0101": "Visor de CV",
+  "FEAT-0102": "Descarga de CV",
+  "FEAT-0103": "Sección de contacto",
+  "FEAT-0104": "Links de perfil profesional",
+  "FEAT-0200": "Documentación de ingeniería",
+  "FEAT-0201": "Explorador de arquitectura",
+  "FEAT-0202": "Casos de estudio",
+  "FEAT-0203": "Catálogo tecnológico",
+  "FEAT-0204": "Caso Qyntra Gym",
+  "FEAT-0205": "Caso HTL Operations",
+  "FEAT-0206": "Caso Capital Gang",
+  "FEAT-0300": "Búsqueda avanzada",
+  "FEAT-0301": "Registro de features",
+  "FEAT-0302": "Trazabilidad de requisitos",
+  "FEAT-0501": "Diseño responsivo",
+  "FEAT-0502": "Soporte de accesibilidad",
+  "FEAT-0503": "Optimización SEO",
+  "FEAT-0504": "Optimización de rendimiento",
+  "FEAT-0505": "Analytics",
+  "FEAT-0600": "i18n EN/ES",
+};
+
+export function getFeatureRegistry(locale: Locale): FeatureRecord[] {
+  if (locale === "es") {
+    return en.map((feature) => ({
+      ...feature,
+      name: esNames[feature.id] ?? feature.name,
+    }));
+  }
+  return en;
+}

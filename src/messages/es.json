@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "titleDefault": "Francisco Sánchez · Software Engineer",
+    "titleTemplate": "%s · Francisco Sánchez",
+    "description": "Portafolio de ingeniería que muestra arquitectura de software, proyectos en producción y oficio profesional."
+  },
+  "nav": {
+    "about": "Acerca de",
+    "work": "Trabajo",
+    "projects": "Trabajo",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "caseStudies": "Casos de estudio",
+    "technologies": "Tecnologías",
+    "docs": "Docs",
+    "github": "GitHub",
+    "lab": "Lab",
+    "platform": "Lab",
+    "search": "Buscar",
+    "architecture": "Arquitectura",
+    "features": "Features",
+    "traceability": "Trazabilidad",
+    "analytics": "Analytics",
+    "resume": "CV",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "primary": "Principal",
+    "mobile": "Móvil"
+  },
+  "theme": {
+    "toLight": "Cambiar a modo claro",
+    "toDark": "Cambiar a modo oscuro",
+    "toggle": "Cambiar tema"
+  },
+  "locale": {
+    "label": "Idioma",
+    "en": "EN",
+    "es": "ES"
+  },
+  "home": {
+    "headline": "Software con evidencia: arquitectura, oficio y disciplina de producción.",
+    "subhead": "Lead Software Engineer en Guadalajara. Productos en vivo: HTL Operations, Qyntra Gym y Capital Gang.",
+    "ctaProjects": "Ver trabajo",
+    "ctaResume": "CV",
+    "ctaContact": "Contacto",
+    "positioningEyebrow": "Posicionamiento",
+    "positioningTitle": "Ingeniería lead con claridad, evidencia y pensamiento de sistemas a largo plazo.",
+    "positioningBody": "Trabajo centrado en PWAs y plataformas de producción—sistemas de operaciones, productos de gimnasio y comercio de marca—con arquitectura, UI accesible y documentación de caso que sobrevive al handoff.",
+    "workEyebrow": "Trabajo seleccionado",
+    "workTitle": "Productos en vivo. Casos documentados.",
+    "workIntro": "Tres superficies en producción con visuales reales y demos públicas. Abre cada caso para contexto, stack, outcomes y documentación.",
+    "workAll": "Todo el trabajo",
+    "workOutcome": "Resultado:",
+    "workView": "Ver caso",
+    "processEyebrow": "Cómo trabajo",
+    "processTitle": "Un arco de entrega repetible.",
+    "processIntro": "La misma disciplina desde discovery hasta documentación—para que la calidad se acumule en lugar de reiniciarse en cada release.",
+    "process": {
+      "discover": {
+        "title": "Descubrir",
+        "body": "Aclarar problema, restricciones y criterios de éxito antes de escribir código."
+      },
+      "architect": {
+        "title": "Arquitectar",
+        "body": "Definir límites, interfaces y trade-offs que mantengan los sistemas evolutivos."
+      },
+      "deliver": {
+        "title": "Entregar",
+        "body": "Publicar incrementos usables con accesibilidad, rendimiento y disciplina de review."
+      },
+      "document": {
+        "title": "Documentar",
+        "body": "Capturar decisiones para que el siguiente ingeniero herede contexto, no arqueología."
+      }
+    },
+    "proofEyebrow": "Credibilidad",
+    "proofTitle": "Ownership reciente y stack central.",
+    "proofAbout": "Timeline completo de experiencia",
+    "proofStack": "Stack central",
+    "proofSkills": "Desglose de skills",
+    "ctaEyebrow": "Siguiente paso",
+    "ctaTitle": "Hablemos de trabajo de ingeniería.",
+    "ctaBody": "Abierto a roles, colaboraciones y conversaciones de producto donde importen la arquitectura y la calidad de entrega.",
+    "ctaLab": "Engineering Lab"
+  },
+  "about": {
+    "eyebrow": "Acerca de",
+    "metaDescription": "Trayectoria, filosofía de ingeniería, experiencia y habilidades.",
+    "philosophy": "Filosofía de ingeniería",
+    "expertise": "Áreas de expertise",
+    "values": "Valores profesionales",
+    "ctaContact": "Contactar",
+    "ctaProjects": "Ver trabajo",
+    "ctaResume": "CV"
+  },
+  "experience": {
+    "eyebrow": "Experiencia",
+    "title": "Timeline profesional",
+    "intro": "Roles e iniciativas que demuestran ownership de ingeniería, entrega de producto y pensamiento de plataforma a largo plazo."
+  },
+  "skills": {
+    "eyebrow": "Habilidades",
+    "title": "Capacidades técnicas",
+    "intro": "Competencias organizadas con claridad: lenguajes, sistemas frontend, práctica de ingeniería y tooling de entrega."
+  },
+  "projects": {
+    "eyebrow": "Trabajo",
+    "title": "Trabajo de ingeniería seleccionado",
+    "intro": "Casos de producto en vivo con visuales reales, notas de arquitectura, outcomes y demos públicas.",
+    "view": "Ver caso",
+    "outcomeLabel": "Resultado:",
+    "featured": "Destacado",
+    "back": "← Todo el trabajo",
+    "role": "Rol:",
+    "client": "Cliente:",
+    "gallery": "Visuales de producto",
+    "caseNav": "Secciones del caso",
+    "context": "Contexto",
+    "problem": "Problema",
+    "solution": "Solución",
+    "objectives": "Objetivos",
+    "approach": "Enfoque",
+    "architecture": "Notas de arquitectura",
+    "documentation": "Documentación",
+    "documentationIntro": "Notas de producto sobre alcance, usuarios, arquitectura y decisiones de entrega.",
+    "technologies": "Tecnologías",
+    "features": "Features",
+    "challenges": "Retos",
+    "outcomes": "Resultados",
+    "results": "Resultados",
+    "lessons": "Lecciones aprendidas",
+    "liveDemo": "Demo en vivo",
+    "repository": "Repositorio",
+    "relatedLab": "Docs de ingeniería",
+    "caseStudy": "Caso de estudio:"
+  },
+  "caseStudies": {
+    "eyebrow": "Casos de estudio",
+    "title": "Casos de estudio de ingeniería",
+    "intro": "Profundizaciones en framing del problema, arquitectura, retos y lecciones.",
+    "read": "Leer caso",
+    "back": "← Todos los casos",
+    "overview": "Resumen",
+    "problem": "Problema",
+    "objectives": "Objetivos",
+    "approach": "Enfoque",
+    "lessons": "Lecciones aprendidas",
+    "relatedProject": "Proyecto relacionado"
+  },
+  "technologies": {
+    "eyebrow": "Tecnologías",
+    "title": "Catálogo tecnológico",
+    "intro": "Stack y prácticas usadas en el portafolio, organizadas por dominio de capacidad."
+  },
+  "docs": {
+    "eyebrow": "Docs de ingeniería",
+    "title": "Navegador de documentación",
+    "intro": "Navegación curada entre gobernanza, producto, diseño, arquitectura y desarrollo.",
+    "open": "Abrir dominio"
+  },
+  "github": {
+    "eyebrow": "GitHub",
+    "title": "Presencia pública de ingeniería",
+    "intro": "Repositorios y actividad que muestran cómo se construye este portafolio y trabajo relacionado en abierto.",
+    "viewRepo": "Ver repositorio",
+    "profile": "Perfil de GitHub"
+  },
+  "search": {
+    "eyebrow": "Buscar",
+    "title": "Buscar en el portafolio",
+    "intro": "Encuentra proyectos, tecnologías, features y entradas de documentación.",
+    "placeholder": "Buscar por palabra clave…",
+    "empty": "Sin resultados para esa consulta.",
+    "hint": "Prueba nombres de proyectos, stacks o dominios como arquitectura."
+  },
+  "architecture": {
+    "eyebrow": "Arquitectura",
+    "title": "Explorador de arquitectura",
+    "intro": "Mapa navegable de capas del sistema, módulos frontend y responsabilidades de routing.",
+    "layers": "Capas del sistema",
+    "frontend": "Módulos frontend",
+    "routing": "Mapa de rutas"
+  },
+  "features": {
+    "eyebrow": "Features",
+    "title": "Registro de features",
+    "intro": "Capacidades de producto del Feature Catalog (PRD-2007), con prioridad y estado.",
+    "priority": "Prioridad",
+    "status": "Estado",
+    "category": "Categoría"
+  },
+  "traceability": {
+    "eyebrow": "Trazabilidad",
+    "title": "Trazabilidad de requisitos",
+    "intro": "Vínculos entre features de producto, fuentes de contenido, rutas y docs de ingeniería.",
+    "feature": "Feature",
+    "route": "Ruta",
+    "content": "Contenido",
+    "docs": "Docs"
+  },
+  "analytics": {
+    "eyebrow": "Analytics",
+    "title": "Observabilidad y analytics",
+    "intro": "Analytics con respeto a la privacidad vía Vercel Analytics, más objetivos de calidad de la plataforma.",
+    "targets": "Objetivos de calidad",
+    "privacy": "Sin scripts invasivos. El analytics se centra en señales agregadas de rendimiento y uso."
+  },
+  "resume": {
+    "eyebrow": "CV",
+    "download": "Descargar PDF",
+    "summary": "Resumen",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "selected": "Proyectos seleccionados",
+    "contact": "Contacto"
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos de trabajo de ingeniería.",
+    "intro": "Abierto a roles, colaboraciones y conversaciones de producto. Prefiere email o red profesional—usa el formulario para redactar un mensaje en tu cliente de correo.",
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "opening": "Abriendo tu cliente de correo…",
+    "errorName": "El nombre es obligatorio.",
+    "errorEmail": "Se requiere un correo válido.",
+    "errorMessage": "El mensaje debe tener al menos 10 caracteres."
+  },
+  "footer": {
+    "contact": "Contacto",
+    "work": "Trabajo",
+    "lab": "Lab"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Página no encontrada",
+    "body": "La página solicitada no existe o se movió.",
+    "home": "Inicio",
+    "projects": "Trabajo"
+  },
+  "lab": {
+    "eyebrow": "Engineering Lab",
+    "title": "Profundidad técnica para peers",
+    "intro": "Superficies secundarias de documentación, arquitectura, registro, búsqueda y observabilidad—agrupadas para que el portafolio público se mantenga enfocado.",
+    "blurb": {
+      "technologies": "Stack y prácticas por dominio de capacidad.",
+      "docs": "Navegación curada de documentación de ingeniería.",
+      "github": "Repositorios públicos y presencia de ingeniería.",
+      "architecture": "Capas del sistema, módulos y mapa de rutas.",
+      "features": "Registro de capacidades de producto con estado.",
+      "traceability": "Matriz feature ↔ ruta ↔ docs.",
+      "search": "Búsqueda transversal por palabra clave.",
+      "analytics": "Objetivos de calidad y analytics con privacidad."
+    }
+  },
+  "platform": {
+    "eyebrow": "Engineering Lab",
+    "title": "Profundidad técnica para peers",
+    "intro": "Superficies secundarias de documentación, arquitectura, registro, búsqueda y observabilidad."
+  }
+}

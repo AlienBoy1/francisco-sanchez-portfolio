@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "project": {
+    "name": "Francisco Sánchez Portfolio",
+    "shortName": "FSP",
+    "version": "1.0.0",
+    "status": "Quality + Deploy readiness",
+    "repository": "https://github.com/AlienBoy1/francisco-sanchez-portfolio",
+    "owner": {
+      "name": "Francisco Javier Sánchez Mariscal",
+      "role": "Software Engineer"
+    }
+  },
+  "engineering": {
+    "documentationFirst": true,
+    "architectureFirst": true,
+    "testingRequired": true,
+    "accessibilityFirst": true,
+    "performanceFirst": true,
+    "seoRequired": true,
+    "responsiveByDefault": true,
+    "darkModeRequired": true,
+    "strictTypeScript": true,
+    "cleanArchitecture": true
+  },
+  "development": {
+    "framework": "Next.js",
+    "language": "TypeScript",
+    "packageManager": "pnpm",
+    "styling": "Tailwind CSS",
+    "uiLibrary": "shadcn/ui",
+    "animation": "Framer Motion",
+    "content": "MDX",
+    "deployment": "Vercel"
+  },
+  "quality": {
+    "minimumLighthouse": {
+      "performance": 95,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100
+    }
+  },
+  "repository": {
+    "defaultBranch": "main",
+    "documentationDirectory": "/docs",
+    "sourceDirectory": "/src",
+    "publicDirectory": "/public",
+    "testsDirectory": "/tests"
+  },
+  "documentation": {
+    "rootStandard": "docs/000-governance/PRT-0000 Portfolio Engineering Standard.md",
+    "language": "English",
+    "style": "Enterprise Engineering Documentation"
+  }
+}
