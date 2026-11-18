@@ -32,7 +32,7 @@ export function getResumeContent(locale: Locale) {
       ...projects.filter((project) => project.featured),
       ...projects.filter((project) => !project.featured),
     ]
-      .slice(0, 3)
+      .slice(0, 6)
       .map((project) => ({
         name: project.name,
         summary: project.summary,

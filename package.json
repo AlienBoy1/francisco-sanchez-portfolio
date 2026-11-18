@@ -13,7 +13,8 @@
     "deploy": "vercel --prod",
     "deploy:preview": "vercel",
     "media:convert": "node scripts/convert-media.mjs",
-    "media:project-placeholders": "node scripts/generate-project-placeholders.mjs"
+    "media:project-placeholders": "node scripts/generate-project-placeholders.mjs",
+    "media:project-covers": "node scripts/generate-project-covers.mjs"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,mjs,cjs}": [
@@ -48,6 +49,7 @@
     "eslint-config-next": "^16.2.12",
     "husky": "^9.1.7",
     "lint-staged": "^17.2.0",
+    "playwright": "^1.65.1",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "sharp": "^0.35.3",

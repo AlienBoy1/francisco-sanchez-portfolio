@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>HTL Operations</title>
+<style>
+:root{
+  --bg:#080c14;--surface:#0f1419;--elev:#1a1f28;--line:rgba(255,255,255,.08);
+  --text:#fff;--muted:#9ca3af;--accent:#f97316;--accent2:#ef4444;
+  --blue:#60a5fa;--green:#4ade80;--red:#f87171;--orange:#fb923c;
+}
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,system-ui,sans-serif;background:radial-gradient(900px 420px at 20% -10%,#1a120c,var(--bg));color:var(--text);min-height:100vh}
+header{height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#06090fcc,#080c14f5);position:sticky;top:0;backdrop-filter:blur(10px);z-index:5}
+.left,.right{display:flex;align-items:center;gap:12px}.status{color:#86efac;font-size:12px;display:flex;gap:6px;align-items:center}
+.logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#f97316,#ef4444);display:grid;place-items:center;font-size:11px;font-weight:800}
+.user{font-size:12px}.user b{color:#86efac}
+main{max-width:1120px;margin:0 auto;padding:22px 18px}
+.page{display:none}.page.active{display:block}
+h1{margin:0;font-size:34px;background:linear-gradient(90deg,#fb923c,#ef4444);-webkit-background-clip:text;color:transparent}
+.sub{color:var(--muted);margin:6px 0 18px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.kpi{border:1px solid var(--line);border-radius:16px;padding:14px;background:linear-gradient(135deg,#111827eb,#1f2937e0)}
+.kpi .v{font-size:28px;font-weight:750;margin-top:8px}
+.kpi.o{border-color:#fb923c55}.kpi.b{border-color:#60a5fa55}.kpi.g{border-color:#4ade8055}.kpi.r{border-color:#f8717155}
+.kpi.o .v{color:var(--orange)}.kpi.b .v{color:var(--blue)}.kpi.g .v{color:var(--green)}.kpi.r .v{color:var(--red)}
+.section{display:flex;justify-content:space-between;align-items:center;margin:8px 0 12px}
+.badge{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{border:1px solid #f9731633;border-radius:18px;padding:16px;background:radial-gradient(280px 120px at 20% 0%,#f9731622,transparent),linear-gradient(180deg,#151b24,#0f1419);min-height:150px}
+.card h3{margin:10px 0 4px;font-size:15px}.card p{margin:0;color:var(--muted);font-size:12px;line-height:1.45}
+.dots{display:flex;gap:8px;margin-top:14px}.dot{width:8px;height:8px;border-radius:50%}
+.btn{margin-top:12px;display:inline-flex;border:1px solid var(--line);background:#ffffff10;color:#fff;border-radius:10px;padding:8px 12px;font-size:12px}
+.search{width:100%;border:1px solid var(--line);background:#0b1220;color:#fff;border-radius:12px;padding:12px 14px;margin:14px 0}
+.empty{text-align:center;padding:48px 12px;color:var(--muted);border:1px dashed var(--line);border-radius:16px}
+.qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.qcard{border:1px solid #38bdf833;border-radius:16px;padding:16px;background:radial-gradient(240px 100px at 15% 0%,#38bdf822,transparent),#0f172a;min-height:140px}
+.qcard h3{margin:0 0 8px;font-size:15px}.qcard p{margin:0;color:#cbd5e1;font-size:12px;line-height:1.5}
+.back{display:inline-block;margin-bottom:12px;color:#93c5fd;font-size:13px;text-decoration:none}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:11px 8px;border-bottom:1px solid var(--line);text-align:left;color:#d1d5db}th{color:var(--muted);font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+@media(max-width:900px){.kpis,.grid,.qgrid{grid-template-columns:1fr 1fr} h1{font-size:26px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="left"><span>☰</span><span class="status">● En línea</span></div>
+  <div class="logo">HTL</div>
+  <div class="right"><span class="user">Harvey · <b>Activo</b></span></div>
+</header>
+<main>
+  <section class="page active" id="home">
+    <h1>HTL Electronics</h1>
+    <p class="sub">Tablero de medición · Bienvenido, Harvey</p>
+    <div class="kpis">
+      <div class="kpi o"><div>En progreso (fuera de SLA)</div><div class="v">0</div></div>
+      <div class="kpi b"><div>En progreso (dentro de SLA)</div><div class="v">0</div></div>
+      <div class="kpi g"><div>Completada (dentro de SLA)</div><div class="v">15</div></div>
+      <div class="kpi r"><div>Completada (fuera de SLA)</div><div class="v">1</div></div>
+    </div>
+    <div class="section"><strong>OPERACIONES: Módulos SOP</strong><span class="badge">13 módulos</span></div>
+    <div class="grid">
+      <article class="card"><div>📄</div><h3>SOP 1 · Cotizaciones</h3><p>Distribución, proyectos y compuestos.</p><div class="dots"><span class="dot" style="background:var(--orange)"></span><span class="dot" style="background:var(--blue)"></span><span class="dot" style="background:var(--green)"></span><span class="dot" style="background:var(--red)"></span></div><span class="btn">Gráficas</span></article>
+      <article class="card"><div>🛒</div><h3>SOP 2 · Requisiciones</h3><p>Flujo de compras y aprobaciones operativas.</p><div class="dots"><span class="dot" style="background:var(--green)"></span></div><span class="btn">Gráficas</span></article>
+      <article class="card"><div>📦</div><h3>SOP 3 · Materiales</h3><p>Control de materiales para proyecto.</p><div class="dots"><span class="dot" style="background:var(--blue)"></span><span class="dot" style="background:var(--green)"></span></div><span class="btn">Gráficas</span></article>
+    </div>
+  </section>
+
+  <section class="page" id="sop2">
+    <a class="back" href="#home">← Volver al tablero</a>
+    <h1>SOP 2 · Requisiciones</h1>
+    <p class="sub">Overview · SLA records y KPIs de requisiciones</p>
+    <div class="kpis">
+      <div class="kpi o"><div>En curso</div><div class="v">0</div></div>
+      <div class="kpi b"><div>En SLA</div><div class="v">0</div></div>
+      <div class="kpi g"><div>Completadas</div><div class="v">12</div></div>
+      <div class="kpi r"><div>Fuera de SLA</div><div class="v">0</div></div>
+    </div>
+    <article class="card" style="min-height:auto">
+      <h3>Registros recientes</h3>
+      <table><thead><tr><th>Folio</th><th>Estado</th><th>SLA</th><th>Área</th></tr></thead>
+      <tbody>
+        <tr><td>REQ-2041</td><td>Completada</td><td>Verde</td><td>Compras</td></tr>
+        <tr><td>REQ-2040</td><td>Completada</td><td>Verde</td><td>Ingeniería</td></tr>
+        <tr><td>REQ-2038</td><td>Completada</td><td>Verde</td><td>Proyectos</td></tr>
+      </tbody></table>
+    </article>
+  </section>
+
+  <section class="page" id="sop6">
+    <a class="back" href="#home">← Volver al tablero</a>
+    <h1>SOP 6 · Ciclo de proyectos</h1>
+    <p class="sub">Stage-gate · cronograma y avances</p>
+    <div class="grid">
+      <article class="card"><h3>Kickoff</h3><p>Arranque formal y alcance inicial.</p><span class="btn">Abrir SLA</span></article>
+      <article class="card"><h3>Ejecución</h3><p>Avances por etapa y responsables.</p><span class="btn">Registrar avance</span></article>
+      <article class="card"><h3>Cierre</h3><p>Validación y handoff operativo.</p><span class="btn">Ver cronograma</span></article>
+    </div>
+  </section>
+
+  <section class="page" id="tasks">
+    <a class="back" href="#home">← Volver al Menú Principal</a>
+    <h1>Mis Tareas</h1>
+    <p class="sub">Asignadas a Harvey · 0 en SOPs</p>
+    <div class="kpis">
+      <div class="kpi o"><div>En progreso (fuera de SLA)</div><div class="v">0</div></div>
+      <div class="kpi b"><div>En progreso (dentro de SLA)</div><div class="v">0</div></div>
+      <div class="kpi g"><div>Completada (dentro de SLA)</div><div class="v">0</div></div>
+      <div class="kpi r"><div>Completada (fuera de SLA)</div><div class="v">0</div></div>
+    </div>
+    <input class="search" value="Buscar por folio o cliente..." readonly/>
+    <div class="empty"><div style="font-size:28px;margin-bottom:8px">⬚</div><strong style="color:#fff">Sin tareas</strong><div>No tienes tareas SOP asignadas</div></div>
+  </section>
+
+  <section class="page" id="quality">
+    <a class="back" href="#home">← Volver al tablero de medición</a>
+    <h1>Quality · SGC</h1>
+    <p class="sub">Espacio corporativo · objetivos de calidad</p>
+    <div class="qgrid">
+      <article class="qcard"><h3>Proyectos</h3><p>Objetivos de calidad del ciclo de proyectos y stage-gate.</p></article>
+      <article class="qcard"><h3>Diseño</h3><p>Objetivos de calidad en ingeniería y revisiones de diseño.</p></article>
+      <article class="qcard"><h3>Systems Integration</h3><p>Objetivos de calidad en integración de sistemas y ensamble.</p></article>
+      <article class="qcard"><h3>Commissioning</h3><p>Objetivos de calidad en puesta en marcha y validación.</p></article>
+      <article class="qcard"><h3>Tráfico y Logística</h3><p>Objetivos de calidad en movimiento y control de materiales.</p></article>
+      <article class="qcard"><h3>Calidad / SGC</h3><p>Objetivos corporativos del sistema de gestión de calidad.</p></article>
+    </div>
+  </section>
+
+  <section class="page" id="charts">
+    <a class="back" href="#home">← Volver al tablero</a>
+    <h1>Gráficas globales</h1>
+    <p class="sub">Analítica agregada de cumplimiento SLA</p>
+    <div class="kpis">
+      <div class="kpi g"><div>Cumplimiento</div><div class="v">94%</div></div>
+      <div class="kpi b"><div>En curso</div><div class="v">0</div></div>
+      <div class="kpi o"><div>En riesgo</div><div class="v">0</div></div>
+      <div class="kpi r"><div>Fuera de SLA</div><div class="v">1</div></div>
+    </div>
+    <article class="card" style="min-height:220px">
+      <h3>Distribución por SOP</h3>
+      <p style="margin-top:10px">SOP1 · SOP2 · SOP3 · SOP6 · SOP7 — conteos agregados sin datos confidenciales.</p>
+      <div style="margin-top:28px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:end;height:120px">
+        <div style="background:linear-gradient(180deg,#fb923c,#ef4444);height:40%;border-radius:8px 8px 0 0"></div>
+        <div style="background:linear-gradient(180deg,#fb923c,#ef4444);height:85%;border-radius:8px 8px 0 0"></div>
+        <div style="background:linear-gradient(180deg,#fb923c,#ef4444);height:55%;border-radius:8px 8px 0 0"></div>
+        <div style="background:linear-gradient(180deg,#fb923c,#ef4444);height:70%;border-radius:8px 8px 0 0"></div>
+        <div style="background:linear-gradient(180deg,#fb923c,#ef4444);height:35%;border-radius:8px 8px 0 0"></div>
+      </div>
+    </article>
+  </section>
+</main>
+<script>
+const pages=[...document.querySelectorAll('.page')];
+window.__show=(id)=>{pages.forEach(p=>p.classList.toggle('active',p.id===id));};
+</script>
+</body>
+</html>

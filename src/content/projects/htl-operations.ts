@@ -5,34 +5,153 @@ import { projectMediaPaths } from "./types";
 function media(locale: Locale): Project["media"] {
   const paths = projectMediaPaths("htl-operations");
   const es = locale === "es";
+  const shot = (
+    index: number,
+    en: { alt: string; caption: string },
+    esCopy: { alt: string; caption: string },
+  ) => ({
+    src: paths.gallery(index),
+    alt: es ? esCopy.alt : en.alt,
+    caption: es ? esCopy.caption : en.caption,
+  });
   return {
     cover: paths.cover,
     coverAlt: es
-      ? "Portada de HTL Operations — panel de operaciones SOP y SLA"
-      : "HTL Operations cover — SOP and SLA operations dashboard",
+      ? "Tablero HTL Operations — KPIs SLA y módulos SOP"
+      : "HTL Operations dashboard — SLA KPIs and SOP modules",
     gallery: [
-      {
-        src: paths.gallery(1),
-        alt: es
-          ? "Superficie de producto HTL Operations"
-          : "HTL Operations product surface",
-        caption: es ? "Plataforma de operaciones" : "Operations platform",
-      },
-      {
-        src: paths.gallery(2),
-        alt: es ? "Marca HTL" : "HTL brand mark",
-        caption: es ? "Marca HTL" : "HTL mark",
-      },
-      {
-        src: paths.gallery(3),
-        alt: es ? "Ícono de aplicación HTL Operations" : "HTL Operations app icon",
-        caption: es ? "Ícono PWA" : "PWA icon",
-      },
-      {
-        src: paths.gallery(4),
-        alt: es ? "Emblema HTL Operations" : "HTL Operations emblem",
-        caption: es ? "Emblema de app" : "App emblem",
-      },
+      shot(
+        1,
+        {
+          alt: "HTL Operations measurement dashboard with SLA KPI cards and SOP modules",
+          caption: "Measurement board · SLA KPIs & SOP modules",
+        },
+        {
+          alt: "Tablero de medición HTL Operations con KPIs SLA y módulos SOP",
+          caption: "Tablero de medición · KPIs SLA y módulos SOP",
+        },
+      ),
+      shot(
+        2,
+        {
+          alt: "HTL Operations authenticated dashboard overview",
+          caption: "Authenticated operations overview",
+        },
+        {
+          alt: "Vista general autenticada del tablero HTL Operations",
+          caption: "Vista general autenticada",
+        },
+      ),
+      shot(
+        3,
+        {
+          alt: "HTL Operations My Tasks inbox with SLA counters",
+          caption: "Mis Tareas · assignment inbox",
+        },
+        {
+          alt: "Bandeja Mis Tareas de HTL Operations con contadores SLA",
+          caption: "Mis Tareas · bandeja de asignaciones",
+        },
+      ),
+      shot(
+        4,
+        {
+          alt: "Quality SGC hub inside HTL Operations",
+          caption: "Quality / SGC hub",
+        },
+        {
+          alt: "Hub de Calidad SGC dentro de HTL Operations",
+          caption: "Hub de Calidad / SGC",
+        },
+      ),
+      shot(
+        5,
+        {
+          alt: "HTL Operations SOP 2 requisitions module",
+          caption: "SOP 2 · Requisiciones",
+        },
+        {
+          alt: "Módulo SOP 2 Requisiciones de HTL Operations",
+          caption: "SOP 2 · Requisiciones",
+        },
+      ),
+      shot(
+        6,
+        {
+          alt: "HTL Operations SOP 6 project cycle module",
+          caption: "SOP 6 · Ciclo de proyectos",
+        },
+        {
+          alt: "Módulo SOP 6 Ciclo de proyectos de HTL Operations",
+          caption: "SOP 6 · Ciclo de proyectos",
+        },
+      ),
+      shot(
+        7,
+        {
+          alt: "HTL Operations quality modules grid",
+          caption: "Quality modules grid",
+        },
+        {
+          alt: "Rejilla de módulos de calidad HTL Operations",
+          caption: "Rejilla de módulos de calidad",
+        },
+      ),
+      shot(
+        8,
+        {
+          alt: "HTL Operations global charts analytics",
+          caption: "Global charts · SLA analytics",
+        },
+        {
+          alt: "Analítica de gráficas globales HTL Operations",
+          caption: "Gráficas globales · analítica SLA",
+        },
+      ),
+      shot(
+        9,
+        {
+          alt: "HTL Operations mobile dashboard layout",
+          caption: "Mobile operations surface",
+        },
+        {
+          alt: "Layout móvil del tablero HTL Operations",
+          caption: "Superficie operativa móvil",
+        },
+      ),
+      shot(
+        10,
+        {
+          alt: "HTL Operations secure login screen",
+          caption: "Secure login · installable PWA",
+        },
+        {
+          alt: "Pantalla de acceso seguro de HTL Operations",
+          caption: "Login seguro · PWA instalable",
+        },
+      ),
+      shot(
+        11,
+        {
+          alt: "HTL Operations light-mode login",
+          caption: "Auth surface · light mode",
+        },
+        {
+          alt: "Login de HTL Operations en modo claro",
+          caption: "Superficie de auth · modo claro",
+        },
+      ),
+      shot(
+        12,
+        {
+          alt: "HTL Operations mobile login",
+          caption: "Mobile auth surface",
+        },
+        {
+          alt: "Login móvil de HTL Operations",
+          caption: "Auth en móvil",
+        },
+      ),
     ],
   };
 }

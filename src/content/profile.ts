@@ -27,16 +27,16 @@ const aboutByLocale: Record<Locale, AboutContent> = {
   en: {
     headline: "Lead Software Engineer · Full Stack Developer · Product Builder",
     introduction:
-      "I build production web products end-to-end—PWAs, operations platforms, and brand experiences—with architecture, UX, and documentation treated as first-class deliverables.",
+      "Production web and mobile products end-to-end—enterprise operations PWAs, field-sales platforms, commercial quoting, gym OS, and brand commerce—with architecture, UX, and documentation as first-class deliverables.",
     summary:
-      "Francisco Javier Sánchez Mariscal is a software engineer based in Guadalajara, Mexico. Selected work includes HTL Operations (enterprise SOP/SLA PWA), Qyntra Gym (member + admin gym OS), and Capital Gang (clothing · tattoo · culture platform).",
+      "Francisco Javier Sánchez Mariscal is a software engineer based in Guadalajara, Mexico. Recent work spans HTL Operations, HTL Smart Sales, HTL Quotates, HTL Route Service, HTL StopWatch, Qyntra Gym, and Capital Gang.",
     philosophy:
       "Engineering excellence shows through process—clear architecture, accessible interfaces, measurable performance, and documentation that survives the handoff.",
     expertise: [
-      "Full-stack product delivery (React, Next.js, Vite, Supabase, Prisma)",
-      "Installable PWAs and authenticated operational systems",
-      "Design systems and token-driven UI",
-      "Technical documentation and case-study depth",
+      "Full-stack product delivery (React, Next.js, Angular, Vite, Supabase, Prisma)",
+      "Installable PWAs and Capacitor field/ops products",
+      "Routing, maps, and Mexico-aware operational systems",
+      "Design systems, bilingual UX, and case-study documentation",
     ],
     values: [
       "Evidence over claims",
@@ -48,16 +48,16 @@ const aboutByLocale: Record<Locale, AboutContent> = {
   es: {
     headline: "Lead Software Engineer · Full Stack · Constructor de Producto",
     introduction:
-      "Construcción de productos web de producción de punta a punta—PWAs, plataformas operativas y experiencias de marca—con arquitectura, UX y documentación como entregables de primer nivel.",
+      "Productos web y móviles de producción de punta a punta—PWAs de operaciones, ventas de campo, cotización comercial, OS de gimnasio y comercio de marca—con arquitectura, UX y documentación como entregables de primer nivel.",
     summary:
-      "Francisco Javier Sánchez Mariscal es ingeniero de software en Guadalajara, México. Trabajo seleccionado: HTL Operations (PWA SOP/SLA), Qyntra Gym (OS de gimnasio miembros + admin) y Capital Gang (clothing · tattoo · culture).",
+      "Francisco Javier Sánchez Mariscal es ingeniero de software en Guadalajara, México. Trabajo reciente: HTL Operations, HTL Smart Sales, HTL Quotates, HTL Route Service, HTL StopWatch, Qyntra Gym y Capital Gang.",
     philosophy:
       "La excelencia de ingeniería se demuestra en el proceso: arquitectura clara, interfaces accesibles, rendimiento medible y documentación que sobrevive al handoff.",
     expertise: [
-      "Entrega full-stack de producto (React, Next.js, Vite, Supabase, Prisma)",
-      "PWAs instalables y sistemas operativos autenticados",
-      "Design systems e UI basada en tokens",
-      "Documentación técnica y profundidad de casos",
+      "Entrega full-stack de producto (React, Next.js, Angular, Vite, Supabase, Prisma)",
+      "PWAs instalables y productos de campo/ops con Capacitor",
+      "Ruteo, mapas y sistemas operativos con contexto México",
+      "Design systems, UX bilingüe y documentación de casos",
     ],
     values: [
       "Evidencia por encima de afirmaciones",
@@ -71,14 +71,30 @@ const aboutByLocale: Record<Locale, AboutContent> = {
 const skillsByLocale: Record<Locale, SkillsContent> = {
   en: {
     groups: [
-      { title: "Languages", items: ["TypeScript", "JavaScript", "HTML", "CSS", "SQL"] },
+      {
+        title: "Languages",
+        items: ["TypeScript", "JavaScript", "Python", "HTML", "CSS", "SQL"],
+      },
       {
         title: "Frontend",
-        items: ["React", "Next.js", "Vite", "Tailwind CSS", "Framer Motion", "PWA"],
+        items: [
+          "React",
+          "Next.js",
+          "Angular",
+          "Vite",
+          "Tailwind CSS",
+          "Framer Motion",
+          "PWA",
+          "Capacitor",
+        ],
       },
       {
         title: "Backend & data",
-        items: ["Supabase", "PostgreSQL", "Prisma", "Express", "Auth/RLS"],
+        items: ["Supabase", "PostgreSQL", "Prisma", "Express", "FastAPI", "Auth/RLS"],
+      },
+      {
+        title: "Maps & ops",
+        items: ["Leaflet", "OpenLayers", "WebSocket", "PDF export", "RBAC"],
       },
       {
         title: "Engineering",
@@ -98,14 +114,30 @@ const skillsByLocale: Record<Locale, SkillsContent> = {
   },
   es: {
     groups: [
-      { title: "Lenguajes", items: ["TypeScript", "JavaScript", "HTML", "CSS", "SQL"] },
+      {
+        title: "Lenguajes",
+        items: ["TypeScript", "JavaScript", "Python", "HTML", "CSS", "SQL"],
+      },
       {
         title: "Frontend",
-        items: ["React", "Next.js", "Vite", "Tailwind CSS", "Framer Motion", "PWA"],
+        items: [
+          "React",
+          "Next.js",
+          "Angular",
+          "Vite",
+          "Tailwind CSS",
+          "Framer Motion",
+          "PWA",
+          "Capacitor",
+        ],
       },
       {
         title: "Backend y datos",
-        items: ["Supabase", "PostgreSQL", "Prisma", "Express", "Auth/RLS"],
+        items: ["Supabase", "PostgreSQL", "Prisma", "Express", "FastAPI", "Auth/RLS"],
+      },
+      {
+        title: "Mapas y ops",
+        items: ["Leaflet", "OpenLayers", "WebSocket", "Export PDF", "RBAC"],
       },
       {
         title: "Ingeniería",
@@ -129,12 +161,12 @@ const experienceByLocale: Record<Locale, ExperienceContent> = {
   en: {
     roles: [
       {
-        id: "htl-operations",
+        id: "htl-suite",
         title: "Software Engineer",
-        organization: "HTL Operations",
+        organization: "HTL Product Suite",
         period: "2025 — Present",
         summary:
-          "Enterprise operations PWA for SOP workflows measured by business-hours SLA—Auth, dashboards, My Tasks, Web Push, Quality hub, and admin tooling on Vite + Supabase + Vercel.",
+          "Enterprise and field products for HTL: Operations (SOP/SLA PWA), Smart Sales (field trajectories + monitoring), Quotates (commercial quoting), Route Service (Mexico routing), and StopWatch (operational timing/PDF).",
       },
       {
         id: "qyntra-gym",
@@ -165,12 +197,12 @@ const experienceByLocale: Record<Locale, ExperienceContent> = {
   es: {
     roles: [
       {
-        id: "htl-operations",
+        id: "htl-suite",
         title: "Ingeniero de Software",
-        organization: "HTL Operations",
+        organization: "Suite de productos HTL",
         period: "2025 — Presente",
         summary:
-          "PWA empresarial de operaciones para flujos SOP medidos con SLA en tiempo hábil—Auth, dashboards, Mis tareas, Web Push, hub de Calidad y admin en Vite + Supabase + Vercel.",
+          "Productos empresariales y de campo para HTL: Operations (PWA SOP/SLA), Smart Sales (trayectorias + monitoreo), Quotates (cotización comercial), Route Service (ruteo México) y StopWatch (timing operativo/PDF).",
       },
       {
         id: "qyntra-gym",

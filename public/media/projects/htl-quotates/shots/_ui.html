@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>HTL Quotates App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#e8eee8;--panel:#f3f7f2;--card:#ffffff;--ink:#1f2a24;--muted:#62706a;
+  --green:#5fad2e;--green-deep:#3f8f1f;--yellow:#e2b93d;--line:rgba(31,42,36,.08);
+  --sidebar:#1c2b24;--sidebar-text:#d7e4db;--accent:#6fbf3a;
+}
+*{box-sizing:border-box}body{margin:0;font-family:Montserrat,Segoe UI,sans-serif;background:radial-gradient(900px 420px at 15% -10%,#c9d9c8,var(--bg));color:var(--ink);min-height:100vh}
+.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{background:linear-gradient(180deg,#22352c,#18241e);color:var(--sidebar-text);padding:18px 14px;display:flex;flex-direction:column;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;padding:8px 10px}
+.brand-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(145deg,#7ed957,#3f8f1f);display:grid;place-items:center;font-weight:800;color:#fff;box-shadow:0 8px 20px rgba(63,143,31,.35)}
+.brand b{display:block;font-size:12px;letter-spacing:.08em}.brand span{font-size:10px;opacity:.75}
+.nav{display:flex;flex-direction:column;gap:6px}
+.nav a{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:14px;color:inherit;text-decoration:none;font-size:13px;font-weight:600}
+.nav a.active,.nav a:hover{background:rgba(111,191,58,.18);color:#fff}
+.user{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding:10px;border-radius:14px;background:rgba(255,255,255,.05)}
+.avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#8fd85a,#3f8f1f);display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff}
+.main{display:flex;flex-direction:column;min-width:0}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.55);backdrop-filter:blur(10px)}
+.search{min-width:320px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:12px 16px;font:inherit;color:var(--muted)}
+.content{padding:22px 24px;display:grid;gap:18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:linear-gradient(180deg,#fff,#f7faf6);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 14px 34px rgba(28,43,36,.06)}
+.card h2{margin:0 0 14px;font-size:16px}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}
+.row:last-child{border-bottom:0}
+.dot{width:10px;height:10px;border-radius:50%}
+.dot.green{background:var(--green)}.dot.yellow{background:var(--yellow)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.btn{border:0;border-radius:999px;padding:10px 14px;font:inherit;font-weight:700;font-size:12px;cursor:default}
+.btn.yellow{background:#f4e3a8;color:#6a5510}.btn.green{background:linear-gradient(90deg,var(--green),var(--green-deep));color:#fff}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}
+.stat .label{color:var(--muted);font-size:12px;margin:0 0 8px}.stat .value{font-size:28px;font-weight:800;margin:0}
+.table{width:100%;border-collapse:collapse;font-size:13px}
+.table th,.table td{padding:12px 8px;border-bottom:1px solid var(--line);text-align:left}
+.table th{color:var(--muted);font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.quick .card{text-align:center;font-weight:700;font-size:13px;padding:22px 12px}
+.page{display:none}.page.active{display:grid;gap:18px}
+@media(max-width:900px){
+  .app{grid-template-columns:1fr}
+  .sidebar{display:none}
+  .grid2,.stats,.quick{grid-template-columns:1fr 1fr}
+  .search{min-width:0;width:100%}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">✓</div>
+      <div><b>HTL</b><span>QUOTES APP</span></div>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="#dashboard" class="active" data-page="dashboard">Inicio</a>
+      <a href="#quotes" data-page="quotes">Cotizaciones</a>
+      <a href="#catalog" data-page="catalog">Catalogo</a>
+      <a href="#admin" data-page="admin">Administracion</a>
+      <a href="#prefs" data-page="prefs">Preferencias</a>
+    </nav>
+    <div class="user"><div style="display:flex;gap:10px;align-items:center"><div class="avatar">OP</div><div style="font-size:12px;font-weight:700">Operador</div></div></div>
+  </aside>
+  <div class="main">
+    <div class="top">
+      <input class="search" value="¿Que deseas buscar hoy?" readonly/>
+      <div style="font-size:12px;font-weight:700;color:var(--muted)">HTL Quotates · Panel</div>
+    </div>
+    <div class="content">
+      <section class="page active" id="dashboard">
+        <div class="grid2">
+          <article class="card">
+            <h2>Proveedores activos</h2>
+            <ul class="list">
+              <li class="row"><span>Proveedor #1</span><span class="dot green"></span></li>
+              <li class="row"><span>Proveedor #2</span><span class="dot green"></span></li>
+              <li class="row"><span>Proveedor #3</span><span class="dot green"></span></li>
+              <li class="row"><span>Proveedor #5</span><span class="dot green"></span></li>
+            </ul>
+            <div class="actions"><button class="btn yellow">Ver Proveedores</button><button class="btn green">Nuevo Proveedor</button></div>
+          </article>
+          <article class="card">
+            <h2>Cotizaciones recientes</h2>
+            <ul class="list">
+              <li class="row"><span>Cotizacion #1</span><span style="color:var(--muted)">2026/JUN/01</span><span class="dot yellow"></span></li>
+              <li class="row"><span>Cotizacion #2</span><span style="color:var(--muted)">2026/JUN/01</span><span class="dot yellow"></span></li>
+              <li class="row"><span>Cotizacion #3</span><span style="color:var(--muted)">2026/JUN/01</span><span class="dot green"></span></li>
+              <li class="row"><span>Cotizacion #4</span><span style="color:var(--muted)">2026/JUN/01</span><span class="dot green"></span></li>
+            </ul>
+            <div class="actions"><button class="btn yellow">Ver cotizaciones</button><button class="btn green">Nueva Cotizacion</button></div>
+          </article>
+        </div>
+        <section class="stats">
+          <article class="stat"><p class="label">Cotizaciones Completadas</p><p class="value">34/41</p></article>
+          <article class="stat"><p class="label">Proveedores activos</p><p class="value">37</p></article>
+          <article class="stat"><p class="label">Partners logísticos</p><p class="value">22</p></article>
+          <article class="stat"><p class="label">Usuarios activos</p><p class="value">8</p></article>
+        </section>
+        <section class="quick">
+          <article class="card">Nueva cotización</article>
+          <article class="card">Catalogo</article>
+          <article class="card">Proveedores</article>
+          <article class="card">Administración</article>
+        </section>
+      </section>
+
+      <section class="page" id="quotes">
+        <article class="card">
+          <h2>Cotizaciones recientes</h2>
+          <table class="table">
+            <thead><tr><th>No. Cotizacion</th><th>Fecha</th><th>Cliente</th><th>Estado</th><th>Acciones</th></tr></thead>
+            <tbody>
+              <tr><td>Q-1042</td><td>2026/JUN/01</td><td>Cliente demo A</td><td><span class="dot yellow"></span></td><td>Ver</td></tr>
+              <tr><td>Q-1043</td><td>2026/JUN/01</td><td>Cliente demo B</td><td><span class="dot green"></span></td><td>Ver</td></tr>
+              <tr><td>Q-1044</td><td>2026/JUN/02</td><td>Cliente demo C</td><td><span class="dot yellow"></span></td><td>Ver</td></tr>
+              <tr><td>Q-1045</td><td>2026/JUN/02</td><td>Cliente demo D</td><td><span class="dot green"></span></td><td>Ver</td></tr>
+            </tbody>
+          </table>
+          <div class="actions"><button class="btn yellow">Ver cotizaciones</button><button class="btn green">Nueva Cotizacion</button></div>
+        </article>
+      </section>
+
+      <section class="page" id="catalog">
+        <div class="grid2">
+          <article class="card">
+            <h2>Modelos de equipo</h2>
+            <table class="table"><thead><tr><th>Modelo</th><th>Numero de parte</th></tr></thead>
+            <tbody>
+              <tr><td>HTL-M100</td><td>PN-1001</td></tr>
+              <tr><td>HTL-M200</td><td>PN-2004</td></tr>
+              <tr><td>HTL-M300</td><td>PN-3012</td></tr>
+            </tbody></table>
+            <div class="actions"><button class="btn yellow">Ver catalogo</button><button class="btn green">Nuevo modelo</button></div>
+          </article>
+          <article class="card">
+            <h2>Componentes</h2>
+            <table class="table"><thead><tr><th>Modelo</th><th>Numero de parte</th></tr></thead>
+            <tbody>
+              <tr><td>CTRL-X</td><td>PN-5510</td></tr>
+              <tr><td>SENS-A</td><td>PN-5518</td></tr>
+              <tr><td>DRV-9</td><td>PN-5590</td></tr>
+            </tbody></table>
+            <div class="actions"><button class="btn yellow">Ver componentes</button><button class="btn green">Nuevo componente</button></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page" id="admin">
+        <article class="card">
+          <h2>Administracion · usuarios</h2>
+          <table class="table">
+            <thead><tr><th>Usuario</th><th>Rol</th><th>Estado</th></tr></thead>
+            <tbody>
+              <tr><td>operador</td><td>Operaciones</td><td><span class="dot green"></span></td></tr>
+              <tr><td>comercial</td><td>Ventas</td><td><span class="dot green"></span></td></tr>
+              <tr><td>admin</td><td>Administracion</td><td><span class="dot green"></span></td></tr>
+            </tbody>
+          </table>
+          <div class="actions"><button class="btn yellow">Gestionar roles</button><button class="btn green">Nuevo usuario</button></div>
+        </article>
+      </section>
+
+      <section class="page" id="prefs">
+        <article class="card">
+          <h2>Preferencias</h2>
+          <ul class="list">
+            <li class="row"><span>Idioma</span><strong>Español</strong></li>
+            <li class="row"><span>Tema</span><strong>Claro / verde HTL</strong></li>
+            <li class="row"><span>Avatar</span><strong>Iniciales</strong></li>
+            <li class="row"><span>Sidebar</span><strong>Expandido</strong></li>
+          </ul>
+          <div class="actions"><button class="btn green">Guardar preferencias</button></div>
+        </article>
+      </section>
+    </div>
+  </div>
+</div>
+<script>
+const pages=[...document.querySelectorAll('.page')];
+const links=[...document.querySelectorAll('#nav a')];
+function show(id){
+  pages.forEach(p=>p.classList.toggle('active', p.id===id));
+  links.forEach(a=>a.classList.toggle('active', a.dataset.page===id));
+}
+links.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();show(a.dataset.page)}));
+window.__show=show;
+</script>
+</body>
+</html>

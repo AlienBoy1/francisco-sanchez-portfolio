@@ -15,6 +15,7 @@ const en: TechGroup[] = [
     items: [
       { name: "TypeScript", note: "Strict typing for maintainable application code" },
       { name: "JavaScript", note: "Runtime and ecosystem interoperability" },
+      { name: "Python", note: "Routing services and data-oriented tooling" },
       { name: "HTML / CSS", note: "Semantic structure and token-driven styling" },
     ],
   },
@@ -25,8 +26,23 @@ const en: TechGroup[] = [
     items: [
       { name: "Next.js", note: "App Router, SSR/SSG, and deployment on Vercel" },
       { name: "React", note: "Component composition and feature modules" },
+      { name: "Angular", note: "Enterprise quoting dashboards and RBAC surfaces" },
+      { name: "Vite", note: "Fast SPA/PWA delivery for ops products" },
+      { name: "Capacitor", note: "Native shells for field-sales Android/iOS" },
       { name: "Tailwind CSS", note: "Utility styling mapped to design tokens" },
       { name: "Framer Motion", note: "Intentional motion with reduced-motion support" },
+      { name: "PWA", note: "Installable product surfaces across HTL and consumer apps" },
+    ],
+  },
+  {
+    id: "data-maps",
+    title: "Data, maps & backend",
+    description: "Persistence, auth, and geospatial capabilities used in shipped work.",
+    items: [
+      { name: "Supabase", note: "Auth, Postgres, RLS, and realtime services" },
+      { name: "Prisma / PostgreSQL", note: "Typed data access for brand commerce" },
+      { name: "FastAPI", note: "Mexico routing service foundations" },
+      { name: "Leaflet / OpenLayers", note: "Field monitoring and routing map UX" },
     ],
   },
   {
@@ -61,6 +77,7 @@ const es: TechGroup[] = [
     items: [
       { name: "TypeScript", note: "Tipado estricto para código mantenible" },
       { name: "JavaScript", note: "Interoperabilidad de runtime y ecosistema" },
+      { name: "Python", note: "Servicios de ruteo y tooling orientado a datos" },
       { name: "HTML / CSS", note: "Estructura semántica y estilos por tokens" },
     ],
   },
@@ -71,8 +88,23 @@ const es: TechGroup[] = [
     items: [
       { name: "Next.js", note: "App Router, SSR/SSG y deploy en Vercel" },
       { name: "React", note: "Composición de componentes y módulos por feature" },
+      { name: "Angular", note: "Dashboards de cotización empresarial y RBAC" },
+      { name: "Vite", note: "Entrega rápida SPA/PWA para productos ops" },
+      { name: "Capacitor", note: "Shells nativos para ventas de campo Android/iOS" },
       { name: "Tailwind CSS", note: "Utilidades mapeadas a design tokens" },
       { name: "Framer Motion", note: "Motion intencional con soporte reduced-motion" },
+      { name: "PWA", note: "Superficies instalables en HTL y apps de consumidor" },
+    ],
+  },
+  {
+    id: "data-maps",
+    title: "Datos, mapas y backend",
+    description: "Persistencia, auth y capacidades geoespaciales del trabajo entregado.",
+    items: [
+      { name: "Supabase", note: "Auth, Postgres, RLS y servicios realtime" },
+      { name: "Prisma / PostgreSQL", note: "Acceso tipado para comercio de marca" },
+      { name: "FastAPI", note: "Fundaciones de servicio de ruteo México" },
+      { name: "Leaflet / OpenLayers", note: "UX de mapa para monitoreo y ruteo" },
     ],
   },
   {

@@ -1,0 +1,42 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>HTL StopWatch</title>
+<style>
+:root{--bg:#0c0a09;--card:#1c1917;--accent:#f59e0b;--text:#fafaf9;--muted:#a8a29e;--line:#292524}
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,system-ui,sans-serif;background:radial-gradient(1000px 500px at 10% -10%,#44403c,var(--bg));color:var(--text);min-height:100vh}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;border-bottom:1px solid var(--line);backdrop-filter:blur(8px);position:sticky;top:0;background:#0c0a09cc}
+.brand{font-weight:800;letter-spacing:.1em;font-size:13px}.brand b{color:var(--accent)}
+nav{display:flex;gap:14px;font-size:13px;color:var(--muted)}nav span.active{color:var(--text)}
+main{max-width:1120px;margin:0 auto;padding:24px 18px;display:grid;gap:16px}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:14px}
+.card{background:linear-gradient(180deg,#1c1917,#151211);border:1px solid #44403c;border-radius:18px;padding:18px}
+.timer{font-size:68px;font-variant-numeric:tabular-nums;font-weight:750;letter-spacing:-.03em}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.btn{background:var(--accent);color:#111;border:0;border-radius:11px;padding:11px 16px;font-weight:750}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid #57534e}
+.muted{color:var(--muted);font-size:13px}
+.kpi{font-size:30px;font-weight:750}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:11px 8px;border-bottom:1px solid var(--line);text-align:left}
+.pill{display:inline-flex;padding:4px 10px;border-radius:999px;background:#292524;color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.06em}
+@media(max-width:820px){.hero,.grid3{grid-template-columns:1fr} .timer{font-size:48px}}
+</style></head><body>
+<header><div class="brand">HTL <b>STOPWATCH</b></div><nav><span class="active">Timer</span><span>Marcas</span><span>Reportes PDF</span><span>Ajustes</span></nav></header>
+<main>
+<section class="hero">
+  <div class="card"><div class="pill">SESIÓN ACTIVA</div><div class="timer" id="t">00:12:48</div>
+  <div class="row"><button class="btn">Pausar</button><button class="btn ghost">Marcar lap</button><button class="btn ghost">Exportar PDF</button></div></div>
+  <div class="card"><div class="muted">Estado operativo</div><div class="kpi" style="color:var(--accent);margin-top:8px">En curso</div><p class="muted" style="margin-top:10px;line-height:1.5">Medición precisa con marcas y exportación PDF para handoff interno.</p></div>
+</section>
+<section class="grid3">
+  <div class="card"><div class="muted">Marcas</div><div class="kpi">7</div></div>
+  <div class="card"><div class="muted">Duración</div><div class="kpi">01:04:22</div></div>
+  <div class="card"><div class="muted">PDFs</div><div class="kpi">3</div></div>
+</section>
+<section class="card"><div class="muted" style="margin-bottom:8px">Historial de marcas</div>
+<table><thead><tr><th>Lap</th><th>Tiempo</th><th>Nota</th></tr></thead><tbody>
+<tr><td>#1</td><td>00:02:10</td><td>Inicio de ciclo</td></tr>
+<tr><td>#2</td><td>00:05:44</td><td>Checkpoint A</td></tr>
+<tr><td>#3</td><td>00:09:01</td><td>Checkpoint B</td></tr>
+<tr><td>#4</td><td>00:12:48</td><td>Actual</td></tr>
+</tbody></table></section>
+</main></body></html>

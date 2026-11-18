@@ -14,11 +14,11 @@ export function getProjects(locale: Locale) {
   return projectsByLocale[locale];
 }
 
-export function getFeaturedProjects(locale: Locale) {
+export function getFeaturedProjects(locale: Locale, limit = 7) {
   const projects = projectsByLocale[locale];
   const featured = projects.filter((project) => project.featured);
   const rest = projects.filter((project) => !project.featured);
-  return [...featured, ...rest].slice(0, 3);
+  return [...featured, ...rest].slice(0, limit);
 }
 
 export function getProjectBySlug(locale: Locale, slug: string) {

@@ -77,7 +77,7 @@ export function HomeNarrative() {
             </Link>
           </motion.div>
 
-          <ul className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-12 grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
             {featured.map((project, index) => (
               <motion.li
                 key={project.slug}
